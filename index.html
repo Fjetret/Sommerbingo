@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sommer Bingo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="images/Overskrift.PNG" alt="Overskrift" class="header-image">
+        </a>
+    </div>
+    <button onclick="requestPassword('Bingo1.html', 'LISA')">LISA</button>
+    <button onclick="requestPassword('Bingo2.html', 'ELLY')">ELLY</button>
+
+    <script>
+        function requestPassword(page, name) {
+            var password = prompt("Skriv inn passordet for å få tilgang til " + name + ":");
+            if (password === "0904" && name === "LISA") {
+                location.href = page;
+            } else if (password === "1811" && name === "ELLY") {
+                location.href = page;
+            } else {
+                alert("Feil passord. Vennligst prøv igjen.");
+            }
+        }
+    </script>
+</body>
+</html>
